@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha a Forma de Pagamento</title>
+    <link rel="stylesheet" type="text/css" href="pagamento.css">
+    <style>
+        #pix-code img {
+            display: none;
+        }
+        #credit-debit-form, #pix-code, #boleto-info {
+            display: none;
+        }
+        #continue-button {
+            display: none; /* O botão é oculto por padrão */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Escolha a Forma de Pagamento</h1>
+    <form action="pagamento.php" method="post" id="payment-form">
+        <div class="payment-options">
+            <div class="payment-option">
+                <input type="radio" id="credit-debit" name="payment-method" value="credit-debit">
+                <label for="credit-debit">Cartão de Crédito/Débito</label>
+            </div>
+            <div class="payment-option">
+                <input type="radio" id="pix" name="payment-method" value="pix">
+                <label for="pix">PIX</label>
+            </div>
+            <div class="payment-option">
+                <input type="radio" id="boleto" name="payment-method" value="boleto">
+                <label for="boleto">Boleto</label>
+            </div>
+        </div>
+        <div id="credit-debit-form">
+            <input type="text" name="card-number" placeholder="Número do Cartão" required><br>
+            <input type="text" name="card-name" placeholder="Nome do Titular" required><br>
+            <input type="text" name="card-expiry" placeholder="Data de Validade" required><br>
+            <input type="text" name="card-cvv" placeholder="CVV" required><br>
+        </div>
+        <div id="pix-code">
+            <img src="img/pagamento.jpeg" alt="PIX Code">
+        </div>
+        <div id="boleto-info">
+            <p>Aqui estão as informações do boleto:</p>
+            <p>Número do Boleto: 123456789</p>
+            <p>Valor: R$ 100,00</p>
+            <p>Vencimento: 01/05/2024</p>
+        </div>
+        <input type="submit" value="Continuar" id="continue-button">
+    </form>
+</div>
+
+<script src="pagamento.js"></script>
+</body>
+</html>
+

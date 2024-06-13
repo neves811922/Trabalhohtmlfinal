@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Cor de fundo mais suave */
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: #333; /* Cor do título mais escura */
+}
+
+.payment-options {
+    margin-top: 20px;
+}
+
+.payment-option {
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.payment-option input[type="radio"] {
+    display: none;
+}
+
+.payment-option label {
+    display: block;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 10px;
+    transition: border-color 0.3s ease-in-out;
+    background-color: #f0f0f0; /* Cor de fundo mais suave */
+    color: #333; /* Cor do texto mais escura */
+    cursor: pointer;
+}
+
+.payment-option input[type="radio"]:checked + label {
+    border-color: #4CAF50;
+    background-color: #4CAF50;
+    color: white;
+}
+
+input[type="submit"] {
+    background-color: #007bff; /* Cor azul mais vibrante */
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Cor azul mais escura ao passar o mouse */
+}
